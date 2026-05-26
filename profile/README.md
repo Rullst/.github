@@ -1,13 +1,23 @@
 <p align="center">
-  <img src="https://github.com/venelouis/Rullst/blob/main/Rullst.png" alt="Rullst Logo" width="300">
+  <img src="https://github.com/venelouis/Rullst/blob/main/Rullst.png" alt="Rullst Logo" width="400">
 </p>
 
 # Rullst - 📜🦀🌐🤖🚀
 ### *"Rust for those who want to build, not suffer."*
 
+*Read this in [Português (Brasil)](./README.pt.md).*
+
+> 📖 **[See all the changes in our Changelog!](./CHANGELOG.md)**  
+> 📚 **[Read the Official Documentation!](https://venelouis.github.io/Rullst/)**  
+> 📦 **[View on Crates.io!](https://crates.io/crates/rullst)**
+
+> [!WARNING]  
+> **Pardon our dust! 🚧**  
+> Rullst is under **constant development and rapid improvement**. As we stabilize the framework and update core dependencies, you might occasionally encounter bugs or breaking changes. We sincerely apologize for any crashes! Please consider becoming a **contributor** to help us build the best web framework on the internet. 🦀❤️
+
 ![Crates.io](https://img.shields.io/crates/v/rullst?style=flat-square&color=orange)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status: v1.0.0](https://img.shields.io/badge/Status-v1.0.0-emerald)
+![Status: v1.0.5](https://img.shields.io/badge/Status-v1.0.5-emerald)
 ![Built with: Axum & Rust Eloquent](https://img.shields.io/badge/Stack-Axum%20%7C%20Rust%20Eloquent-blue)
 
 **Rullst** (Rust + Fullstack) is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. 
@@ -31,7 +41,7 @@ Rullst redefines this experience. We offer an integrated, cohesive developer exp
 
 ---
 
-## 🏆 Everything You Need, Built-In (v1.0.0)
+## 🏆 Everything You Need, Built-In (v1.0.1)
 
 Rullst ships with **7 completed milestones** covering every layer of modern web development:
 
@@ -89,9 +99,11 @@ Scaffold a fully operational application with our interactive CLI wizard!
 cargo rullst new
 
 # The wizard will prompt you:
-# 🚀 App name? -> my-app
-# 🏗️ What would you like to build? -> SaaS App / REST API
-# 🗄️ Select a DB Provider -> Sqlite / Postgres / MySQL
+# 🚀 App name? (no spaces allowed) -> my-app
+# 🏗️ What would you like to build? -> Full-Stack Web App (SaaS, Portfolio, Blog) / REST API
+# 🔥 Enable Hot Reloading by default? -> Yes / No
+# 🗄️ Will your project need a Data Base? -> Yes / No
+# 💾 Select a DB Provider -> Sqlite / Postgres / MySQL/MariaDB
 
 # 2. Enter the project folder
 cd my-app
@@ -203,7 +215,7 @@ Under the hood, Rullst compiles your routes as a dynamic library (`cdylib`), loa
 
 ---
 
-## 🎯 Architecture under the hood (v1.0.0)
+## 🎯 Architecture under the hood (v1.0.3)
 
 Rullst is structured as a modular monorepo Cargo Workspace to optimize compile times:
 
