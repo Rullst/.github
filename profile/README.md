@@ -5,19 +5,11 @@
 # Rullst - 📜🦀🌐🤖🚀
 ### *"Rust for those who want to build, not suffer."*
 
-*Read this in [Português (Brasil)](./README.pt.md).*
-
 > 📖 **[See all the changes in our Changelog!](./CHANGELOG.md)**  
 > 📚 **[Read the Official Documentation!](https://venelouis.github.io/Rullst/)**  
 > 📦 **[View on Crates.io!](https://crates.io/crates/rullst)**
 
-> [!WARNING]  
-> **Pardon our dust! 🚧**  
-> Rullst is under **constant development and rapid improvement**. As we stabilize the framework and update core dependencies, you might occasionally encounter bugs or breaking changes. We sincerely apologize for any crashes! Please consider becoming a **contributor** to help us build the best web framework on the internet. 🦀❤️
-
-![Crates.io](https://img.shields.io/crates/v/rullst?style=flat-square&color=orange)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status: v1.0.5](https://img.shields.io/badge/Status-v1.0.5-emerald)
 ![Built with: Axum & Rust Eloquent](https://img.shields.io/badge/Stack-Axum%20%7C%20Rust%20Eloquent-blue)
 
 **Rullst** (Rust + Fullstack) is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. 
@@ -39,56 +31,6 @@ Rullst redefines this experience. We offer an integrated, cohesive developer exp
 * **First-Class Active Record ORM:** Native integration with your **`rust-eloquent`** package. Interacting with databases is as intuitive as `user.save()`.
 * **AI-Native Engineering & AI-Friendly:** Designed from the ground up for modern pair-programming. Strict type-safety, zero dynamic runtime magic, automatic `.ai-rules` scaffolding, and structured schemas prevent AI agent hallucinations and allow instant compiler self-correction.
 
----
-
-## 🏆 Everything You Need, Built-In (v1.0.1)
-
-Rullst ships with **7 completed milestones** covering every layer of modern web development:
-
-| Category | Features |
-|---|---|
-| 🛠️ **CLI & DX** | `cargo rullst new` wizard, `make:controller`, `make:model -m`, `make:middleware`, `make:worker`, `generate:openapi`, `cargo rullst upgrade` (self-healing) |
-| 🗄️ **Database** | Active Record ORM, Migrations (`db:migrate`, `db:rollback`, `db:status`), Seeders & Factories, HasMany / BelongsTo / BelongsToMany, Eager Loading |
-| 🔒 **Auth & Security** | Argon2 hashing, JWT & Cookie sessions, CSRF protection, Social OAuth (Google, GitHub, Facebook, Twitter via `rust-socialite`), `cargo rullst auth` scaffolding |
-| ⚡ **Frontend** | HTMX first-class support, TailwindCSS auto-integration, partial template rendering, **Rullst Live** (Phoenix LiveView-inspired server-driven UI), **Wasm Islands** (`#[client_component]`) |
-| 📦 **Production** | Queue (SQLite/Redis), Cache (Memory/Redis), Task Scheduler (Cron), Docker multi-stage builds, **Rullst Horizon** dashboard |
-| 🏢 **Enterprise** | Declarative Validation, Mailer (SMTP/Resend/SendGrid), Storage (Local/S3/R2), WebSockets, Multi-Tenancy, Feature Flags, E2E Testing |
-| 🚀 **Unfair Advantage** | **AI Core** (`rullst::ai` — OpenAI/Gemini/Anthropic/Ollama + RAG), **Rullst Studio** (visual DB GUI), **Self-Healing Error Console** (AI auto-fix), **Hot Reloading via `dylib`** |
-
----
-
-## 🎨 The "Hello World" That Conquers at First Sight
-
-This is a complete, fully operational web server with type-safe routing, compile-time HTML rendering, and automatic XSS escaping. It is exactly **20 lines of code**:
-
-```rust
-use rullst::{html, routes, Server, Router, response::{Html, IntoResponse}};
-
-async fn hello() -> impl IntoResponse {
-    Html(html! {
-        <main style="display: grid; place-items: center; height: 100vh; background: #090d16; color: #fff; font-family: system-ui;">
-            <div style="text-align: center;">
-                <h1 style="font-size: 4rem; margin: 0; background: linear-gradient(135deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                    "Hello, World!"
-                </h1>
-                <p style="color: #64748b; font-size: 1.25rem; margin-top: 1rem;">
-                    "Written in Rust. Rendered in microseconds. Safe by default."
-                </p>
-            </div>
-        </main>
-    })
-}
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    Server::new(routes![get("/" => hello)])
-        .run(3000)
-        .await?;
-    Ok(())
-}
-```
-
----
 
 ## ⚡ Get Started in 10 Seconds
 
@@ -115,88 +57,6 @@ cargo run
 HOT_RELOAD=1 cargo run
 ```
 
----
-
-## 🛠️ The Full-Stack Active Record Experience
-
-When your application grows, Rullst scales with you using Active Record:
-
-```rust
-use rullst::{html, routes, Server, Router, response::{Html, IntoResponse}};
-use rust_eloquent::{Eloquent, EloquentModel, sqlx::{self, FromRow}};
-
-#[derive(Debug, Clone, FromRow, rust_eloquent::Eloquent)]
-#[eloquent(table = "users")]
-pub struct User {
-    pub id: i32,
-    pub name: String,
-}
-
-async fn home() -> impl IntoResponse {
-    // Elegant, type-safe data fetching
-    let users = User::all().await.unwrap();
-
-    Html(html! {
-        <div style="background: #0f172a; color: #fff; padding: 5rem; text-align: center; font-family: sans-serif;">
-            <h1>"Total Active Users: " {users.len()}</h1>
-        </div>
-    })
-}
-
-// 1. Declare the artisan macro here to intercept CLI arguments for migrations
-rullst::artisan!();
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // 2. The artisan! macro automatically intercepts `db:*` commands and exits early.
-    // If it's a normal run, it continues server execution here.
-
-    let router = routes![
-        get("/" => home),
-    ];
-
-    Server::new(router)
-        .run(3000)
-        .await?;
-
-    Ok(())
-}
-```
-
----
-
-## 🗄️ Database Migrations (Artisan CLI)
-
-Rullst includes an embedded, high-performance migration runner. You don't need external binaries. The framework ships with a CLI tool that parses pure Rust closures to construct your schema safely.
-
-```bash
-# Scaffold a new migration using pure Rust DSL
-cargo rullst make:migration create_users_table
-
-# Run all pending migrations against your database
-cargo rullst db:migrate
-
-# Rollback the last batch of migrations
-cargo rullst db:rollback
-```
-
-Under the hood, these commands are intercepted by the `rullst::artisan!()` macro, guaranteeing the server never starts when you only want to migrate your database.
-
----
-
-## 🛡️ Self-Healing Upgrades
-
-Afraid of breaking changes when upgrading the framework? Don't be. Rullst was built with a "Self-Healing Upgrades" philosophy. 
-
-When a new version of Rullst introduces API changes, we never break your code immediately. Instead, we use `#[deprecated]` warnings. You can update your entire application automatically using our CLI:
-
-```bash
-cargo rullst upgrade
-```
-
-This command will safely update the Rullst dependency and use Rust's powerful `cargo fix` refactoring tools to automatically rewrite your code to match the new API signatures. Stress-free upgrades, forever.
-
----
 
 ## 🔥 Hot Reloading (Zero Downtime Dev Loop)
 
@@ -210,22 +70,6 @@ HOT_RELOAD=1 cargo run
 # 🔄 Background recompilation of the cdylib
 # 🚀 Router hot-swapped atomically — zero downtime!
 ```
-
-Under the hood, Rullst compiles your routes as a dynamic library (`cdylib`), loads it via `libloading`, and uses a `notify` file-watcher to detect changes and trigger background rebuilds. The router is swapped atomically via `Arc<RwLock<Router>>` — the HTTP server never restarts and TCP connections are never dropped.
-
----
-
-## 🎯 Architecture under the hood (v1.0.3)
-
-Rullst is structured as a modular monorepo Cargo Workspace to optimize compile times:
-
-1. **`rullst` (Core Crate):** Wraps and configures Axum, handles life-cycle DB injection, and exposes response types. Ships with production utilities (Queue, Cache, Scheduler), enterprise features (Validation, Mailer, Storage, WebSockets, Horizon), AI-Native core (`rullst::ai`), Rullst Live (server-driven UI), Wasm Islands, and Hot Reloading via dynamic linking.
-2. **`rullst-macros` (Compiler-Engine):** Procedural JSX-like compiler that outputs safe memory-buffer string extensions at compile time.
-3. **`cargo-rullst` (CLI Scaffold):** Scaffolds clean, isolated local-linked workspaces that compile out-of-the-box.
-
-For detailed technical conventions, directory structures, and framework APIs, refer to our [Official Specification (SST)](./docs/spec.md).
-
----
 
 ## 📝 License
 
