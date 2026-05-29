@@ -5,7 +5,7 @@
 # Rullst - 📜🦀🌐🤖🚀
 ### *"Rust for those who want to build, not suffer."*
 
-> 📖 **[See all the changes in our Changelog!](./CHANGELOG.md)**  
+> 📖 **[See all the changes in our Changelog!](https://github.com/venelouis/Rullst/blob/main/CHANGELOG.md)**  
 > 📚 **[Read the Official Documentation!](https://venelouis.github.io/Rullst/)**  
 > 📦 **[View on Crates.io!](https://crates.io/crates/rullst)**
 
@@ -13,6 +13,24 @@
 ![Built with: Axum & Rust Eloquent](https://img.shields.io/badge/Stack-Axum%20%7C%20Rust%20Eloquent-blue)
 
 **Rullst** (Rust + Fullstack) is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. 
+
+## 🏆 Everything You Need, Built-In
+
+Rullst ships with **8 completed milestones** covering every layer of modern web development:
+
+| Category | Features |
+|---|---|
+| 🛠️ **CLI & DX** | `cargo rullst new` wizard, `make:controller`, `make:model -m`, `make:middleware`, `make:worker`, `generate:openapi`, `cargo rullst upgrade` (self-healing) |
+| 🗄️ **Database** | Active Record ORM, Migrations (`db:migrate`, `db:rollback`, `db:status`), Seeders & Factories, HasMany / BelongsTo / BelongsToMany, Eager Loading |
+| 🔒 **Auth & Security** | Argon2 hashing, JWT & Cookie sessions, CSRF protection, Social OAuth (Google, GitHub, Facebook, Twitter via `rust-socialite`), `cargo rullst auth` scaffolding |
+| ⚡ **Frontend** | HTMX first-class support, TailwindCSS auto-integration, partial template rendering, **Rullst Live** (Phoenix LiveView-inspired server-driven UI), **Wasm Islands** (`#[client_component]`) |
+| 📦 **Production** | Queue (SQLite/Redis), Cache (Memory/Redis), Task Scheduler (Cron), Docker multi-stage builds, **Rullst Horizon** dashboard |
+| 🏢 **Enterprise** | Declarative Validation, Mailer (SMTP/Resend/SendGrid), Storage (Local/S3/R2), WebSockets, Multi-Tenancy, Feature Flags, E2E Testing |
+| 🚀 **Unfair Advantage** | **AI Core** (`rullst::ai` — OpenAI/Gemini/Anthropic/Ollama + RAG), **Rullst Studio** (visual DB GUI), **Self-Healing Error Console** (AI auto-fix), **Hot Reloading via `dylib`** |
+| 🌍 **Edge & Data** | Edge Runtime (Cloudflare Workers, Fastly, AWS Lambda@Edge), Zero-Config Distributed SQLite Replication (Turso/D1), Autonomous Upgrades |
+
+---
+
 
 ## ⚡ Get Started in 10 Seconds
 
