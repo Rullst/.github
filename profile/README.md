@@ -1,22 +1,22 @@
 <p align="center">
-  <img src="https://venelouis.github.io/Rullst/Rullst.png" alt="Rullst Logo" width="400">
+  <img src="https://raw.githubusercontent.com/venelouis/Rullst/main/Rullst.png" alt="Rullst Logo" width="300">
 </p>
 
-# Rullst - 📜🦀🌐🤖🚀
-### *"Rust for those who want to build, not suffer."*
-
-> 📖 **[See all the changes in our Changelog!](https://github.com/venelouis/Rullst/blob/main/CHANGELOG.md)**  
-> 📚 **[Read the Official Documentation!](https://venelouis.github.io/Rullst/)**  
-> 📦 **[View on Crates.io!](https://crates.io/crates/rullst)**
-
-
+<h1 align="center">Rullst 📜🦀🌐🚀</h1>
+<h3 align="center"><i>Rust for those who want to build, not suffer.</i></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/crates/v/rullst?style=for-the-badge&color=fc8d62&logo=rust" alt="Crates.io">
+  <img src="https://img.shields.io/crates/v/rullst?style=for-the-badge&color=10b981&logo=rust" alt="Crates.io">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
-  <img src="https://img.shields.io/docsrs/rullst?style=for-the-badge&color=4d76ae" alt="Docs">
-  <img src="https://img.shields.io/crates/d/rullst?style=for-the-badge&color=8da0cb" alt="Downloads">
+  <a href="https://discord.gg/2ntKFtsSjw">
+    <img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white&style=for-the-badge" alt="Discord">
+  </a>
+  <a href="https://venelouis.github.io/Rullst/">
+    <img src="https://img.shields.io/badge/Website-Official%20Site-blue?logo=github&logoColor=white&style=for-the-badge" alt="Official Website">
+  </a>
 </p>
+
+<br/>
 
 **Rullst** (Rust + Fullstack) is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. 
 
