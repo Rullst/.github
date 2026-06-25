@@ -51,13 +51,10 @@
 
 It was created to solve the biggest problem in the Rust web ecosystem: the high barrier of entry that turns web programming into a PhD research on compiler design. We believe you should spend your energy building your business, not fighting borrow checkers and manual routing setups.
 
-<h2 align="center">How to build a SaaS Blueprint with Rullst </h2>
+<h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
 <p align="center">
-<a href="https://www.youtube.com/watch?v=nDXLeNM327g">
-  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="430" />
-</a>
+  <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="100%"/>
 </p>
-
 
 ## 💡 The Rullst Manifesto
 
@@ -91,3 +88,25 @@ Rullst ships with **10 completed milestones** covering every layer of modern web
 | 🆓 **Free Enterprise** | **Rullst Nexus** (visual auto-CMS & AI Chat assistant), **Rullst Capital** (Stripe/LemonSqueezy subscriptions boilerplate), **Dual-Engine Frontend** (Hyper Desktop + Omni Multi-Platform Signal Apps), **Rullst Shield** (Wasm WAF & PII masking), **Rullst Foundry** (1-click Cloud Devops Deploy) |
 | ⚡ **Linker Hacking** | **Mold/Cranelift Deep Integration** (sub-100ms incremental hot loops), compiler-driven auto-link optimization |
 
+
+<h2 align="center">Click to Watch: How to build a SaaS Blueprint with Rullst </h2>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=nDXLeNM327g">
+  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="430" />
+</a>
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <th align="center" width="50%"><h2>SaaS Blueprint</h2></th>
+    <th align="center" width="50%"><h2>LMS Blueprint</h2></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif1.gif" alt="SaaS Blueprint" width="100%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif2.gif" alt="LMS Blueprint" width="100%" />
+    </td>
+  </tr>
+</table>
