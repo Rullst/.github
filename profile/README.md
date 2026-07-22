@@ -1,23 +1,35 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/venelouis/Rullst/main/Rullst.png" alt="Rullst Logo" width="300">
+  <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/Rullst.png" alt="Rullst Logo" width="300">
 </p>
 
 <h1 align="center">Rullst 📜🦀🌐🚀</h1>
 <h3 align="center"><i>Rust for those who want to build, not suffer.</i></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/crates/v/rullst?style=for-the-badge&color=10b981&logo=rust" alt="Crates.io">
+  <a href="https://crates.io/crates/rullst"><img src="https://img.shields.io/crates/v/rullst?style=for-the-badge&color=10b981&logo=rust" alt="Crates.io"></a>
   <a href="https://crates.io/crates/rullst"><img src="https://img.shields.io/crates/d/rullst?style=for-the-badge&color=blue" alt="Crates.io Downloads"></a>
   <a href="https://docs.rs/rullst"><img src="https://img.shields.io/docsrs/rullst?style=for-the-badge&logo=docsdotrs" alt="Docs.rs"></a>
   <a href="https://github.com/Rullst/Rullst/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/ci.yml?style=for-the-badge&label=Build" alt="Rust CI"></a>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
-  <a href="https://discord.gg/2ntKFtsSjw"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white&style=for-the-badge" alt="Discord"></a>
-  <a href="https://rullst.github.io"><img src="https://img.shields.io/badge/Website-Official%20Site-blue?logo=github&logoColor=white&style=for-the-badge" alt="Official Website"></a>
 </p>
 
 <br/>
 
-**Rullst** is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. It solves the biggest problem in the Rust web ecosystem: the high barrier of entry. With Rullst, you spend your energy building your business, not fighting borrow checkers and manual routing setups.
+**Rullst** is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity and Security**. It solves the biggest problem in the Rust web ecosystem: the high barrier of entry. With Rullst, you spend your energy building your business, not fighting borrow checkers and manual routing setups.
+
+---
+
+### 📚 Documentation & Community
+
+We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
+
+👉 **[Explore the Official Website & Docs](https://rullst.github.io/#docs)**
+
+💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
+
+> **Found a bug?** [Report an Issue](https://github.com/Rullst/Rullst/issues)
+
+---
 
 <h3 align="center">🛡️ Enterprise-Grade Security</h3>
 
@@ -25,6 +37,7 @@
   Rullst is built with a "Zero-Panic Policy" and tested against the most rigorous standards in the industry.<br/>
   Our continuous pipeline guarantees absolute safety for production edge infrastructure:
 </p>
+
 
 <div align="center">
 
@@ -51,57 +64,17 @@
 | **Kani Verifier** | [![Kani Verifier](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/kani.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/kani.yml) | Automated reasoning and formal verification |
 | **Mutation Testing** | [![Mutation Testing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/mutants.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/mutants.yml) | Mutation testing for test suite robustness |
 | **SLSA Level 3** | [![SLSA 3](https://img.shields.io/badge/SLSA-Level_3-brightgreen?style=flat-square&label=)](https://slsa.dev/) | Supply-chain Levels for Software Artifacts |
-| **Panic Policy** | [![Zero Panics](https://img.shields.io/badge/status-zero_tolerance-brightgreen?style=flat-square&label=)](https://github.com/Rullst/Rullst/blob/main/SECURITY.md) | Graceful error handling across the framework |
+| **Panic Policy** | [![Zero Panics Policy](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/zero-panics.yml?style=flat-square&label=Zero%20Panics)](https://github.com/Rullst/Rullst/actions/workflows/zero-panics.yml) | Graceful error handling across the framework |
 | **MSRV** | [![MSRV](https://img.shields.io/badge/MSRV-1.94.0-orange?style=flat-square&label=)](https://github.com/Rullst/Rullst) | Minimum Supported Rust Version |
+
 </div>
 
-<!--
-| **Mutation Testing** | [![Mutation Testing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/mutants.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/mutants.yml) | Validating test suite exhaustiveness |
--->
 
-<br/>
-
-**Rullst** (Rust + Fullstack) is an opinionated, developer-first full-stack web framework for Rust, obsessively designed for **Emotional Productivity**. 
-
-It was created to solve the biggest problem in the Rust web ecosystem: the high barrier of entry that turns web programming into a PhD research on compiler design. We believe you should spend your energy building your business, not fighting borrow checkers and manual routing setups.
-
+<br>
 <h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
 <p align="center">
-  <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="80%"/>
+  <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="100%"/>
 </p>
-
-## 💡 The Rullst Manifesto
-
-> *"Most Rust frameworks treat the web developer like a compiler engineer. Rullst treats the developer like someone who wants to build awesome products at lightning speed."*
-
-In the current ecosystem, to write a simple CRUD, you are forced to glue dozens of crates together, manually map nested routing trees, write verbose ORMs requiring multiple structs, and continuously clone variables inside dynamic HTML templates just to satisfy the borrow checker.
-
-Rullst redefines this experience. We offer an integrated, cohesive developer experience that brings the sweetness and iteration speed of **Laravel and Next.js** together with the Formula 1 performance and military-grade safety of **Rust, Axum, and Hyper**:
-
-* **No More Frankenstein setups:** A single cohesive framework managing your server (Axum), your database (`rullst-orm`), and your HTML rendering.
-* **No More Borrow Checker fights in UI:** Our compile-time JSX-like `html!` macro processes pure elements on the server (SSR). It generates optimized string-builders directly at compile time. It's blazing fast, safe, and SEO-friendly by default.
-* **First-Class Active Record ORM:** Native integration with your **`rullst-orm`** package. Interacting with databases is as intuitive as `user.save()`.
-* **AI-Native Engineering & AI-Friendly:** Designed from the ground up for modern pair-programming. Strict type-safety, zero dynamic runtime magic, automatic `.ai-rules` scaffolding, and structured schemas prevent AI agent hallucinations and allow instant compiler self-correction.
-
----
-
-## 🏆 Everything You Need, Built-In
-
-Rullst ships with **10 completed milestones** covering every layer of modern web development:
-
-| Category | Features |
-|---|---|
-| 🛠️ **CLI & DX** | `cargo rullst new` wizard (interactive blueprints: Blank, LMS, SaaS, Blog, ERP, Uptime), `make:controller`, `make:model -m`, `make:middleware`, `make:worker`, `generate:openapi`, `cargo rullst upgrade` (self-healing) |
-| 🗄️ **Database** | Active Record ORM, Migrations (`db:migrate`, `db:rollback`, `db:status`), Seeders & Factories, HasMany / BelongsTo / BelongsToMany, Eager Loading |
-| 🔒 **Auth & Security** | Argon2 hashing, JWT & Cookie sessions, CSRF protection, Social OAuth (Google, GitHub, Facebook, Twitter via `rullst-connect`), `cargo rullst auth` scaffolding |
-| ⚡ **Frontend** | HTMX first-class support, TailwindCSS auto-integration, partial template rendering, **Rullst Live** (Phoenix LiveView-inspired server-driven UI), **Wasm Islands** (`#[client_component]`) |
-| 📦 **Production** | Queue (SQLite/Redis), Cache (Memory/Redis), Task Scheduler (Cron), Docker multi-stage builds, **Rullst Horizon** dashboard |
-| 🏢 **Enterprise** | Declarative Validation, Mailer (SMTP/Resend/SendGrid), Storage (Local/S3/R2), WebSockets, Multi-Tenancy, Feature Flags, E2E Testing |
-| 🚀 **Unfair Advantage** | **AI Core** (`rullst::ai` — OpenAI/Gemini/Anthropic/Ollama + RAG), **Rullst Studio** (visual DB GUI), **Self-Healing Error Console** (AI auto-fix), **Hot Reloading via `dylib`** |
-| 🌍 **Edge & Data** | Edge Runtime (Cloudflare Workers, Fastly, AWS Lambda@Edge), Zero-Config Distributed SQLite Replication (Turso/D1), Autonomous Upgrades |
-| 🆓 **Free Enterprise** | **Rullst Nexus** (visual auto-CMS & AI Chat assistant), **Rullst Capital** (Stripe/LemonSqueezy subscriptions boilerplate), **Dual-Engine Frontend** (Hyper Desktop + Omni Multi-Platform Signal Apps), **Rullst Shield** (Wasm WAF & PII masking), **Rullst Foundry** (1-click Cloud Devops Deploy) |
-| ⚡ **Linker Hacking** | **Mold/Cranelift Deep Integration** (sub-100ms incremental hot loops), compiler-driven auto-link optimization |
-
 
 <h2 align="center">Click to Watch: How to build a SaaS Blueprint with Rullst </h2>
 <p align="center">
@@ -117,13 +90,57 @@ Rullst ships with **10 completed milestones** covering every layer of modern web
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif1.gif" alt="SaaS Blueprint" width="100%" />
+      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif1.gif" alt="SaaS Blueprint" width="100%" />
     </td>
     <td align="center">
-      <img src="https://github.com/Rullst/Rullst/raw/main/gifs/gif2.gif" alt="LMS Blueprint" width="100%" />
+      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif2.gif" alt="LMS Blueprint" width="100%" />
     </td>
   </tr>
 </table>
+
+
+---
+
+### ⚡ Unmatched Performance
+
+Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity without sacrificing bare-metal speed. In our official [Criterion micro-benchmarks](BENCHMARKS.md):
+
+- **SSR Rendering**: `~1.07 µs` (4.2x faster than Dioxus, 8.5x faster than Leptos).
+- **Routing**: `~974 ns` (Identical latency to raw Axum).
+
+### ✨ The "Wow" Factor
+
+Rullst brings the ergonomics of Laravel and Ruby on Rails to the blazing-fast, memory-safe world of Rust:
+
+- 🚀 **Hybrid Hot-Reloading**: Sub-millisecond UI updates via WebSockets, paired with Zero-downtime Dynamic Library (`.dll`/`.so`) hot-swapping for backend business logic.
+- 🎨 **Rullst Nexus**: An auto-generated, dark-mode CMS & Admin Panel directly from your Structs.
+- 🛡️ **Zero-Panic Policy**: Hardened architecture built for production edge infrastructure.
+- ⚡ **Interactive Scaffolding**: 1-click generators for Auth, ERPs, Uptime Monitors, and Deployments.
+
+---
+
+### 💻 The Beauty of Rullst
+
+```rust
+use rullst::{routing::get, html, Server, Response};
+
+#[routes]
+fn home() -> Response {
+    html! {
+        <div class="h-screen bg-slate-900 text-emerald-400 flex items-center justify-center">
+            <h1>"Hello, Rullst!"</h1>
+        </div>
+    }
+}
+
+#[tokio::main]
+async fn main() {
+    Server::new()
+        .route("/", get(home))
+        .run()
+        .await;
+}
+```
 
 ---
 
@@ -134,28 +151,51 @@ Rust has a breathtaking ecosystem, but finding the right tool can be overwhelmin
 Here is an honest, objective breakdown of where Rullst stands compared to other beloved frameworks.
 </p>
 
-### 🔬 HTTP & API Frameworks (Actix-Web, Axum, Rocket, Salvo, Poem)
+### 🔬 HTTP & API Frameworks (Actix-Web, Axum, Salvo, Poem)
 These are the **titans of the Rust web ecosystem**. They provide pristine routing, middlewares, and blazing-fast HTTP primitives. Actix-Web and Rocket pioneered the space, while Axum, Salvo, and Poem brought new paradigms.
 * **The Catch:** They are fundamentally focused on HTTP. You have to wire the rest of the application yourself. You must choose, configure, and integrate your own Database ORM, Auth logic, Webhooks, CLI, and Background Workers.
 * **Where Rullst Excels:** **Batteries Included.** Rullst actually uses *Axum* under the hood for its HTTP routing! But instead of leaving you in an empty room, Rullst gives you a fully furnished house. You get a CLI, ORM, Auth, Stripe integration, and Background Workers out-of-the-box in 1 minute.
 
-### 🚂 Full-Stack Frameworks (Loco)
-Loco is a fantastic full-stack framework heavily inspired by Rails. It also uses Axum and provides great generators.
+### 🚂 Full-Stack Frameworks (Loco, Topcoat)
+**Loco** is a fantastic full-stack framework heavily inspired by Rails. It also uses Axum and provides great generators.
+**Topcoat** is an experimental, batteries-included framework from the Tokio team that focuses on reactive server-side rendering (SSR) without writing JavaScript.
 * **Where Rullst Excels:** **Emotional Productivity & DX.** Rullst takes a radically opinionated stance on Developer Experience. We provide immersive CLI interactive dashboards (`cargo rullst studio`), built-in Wasm Islands, zero-panic architectural guarantees, Nix reproducibility, and native Omni (Desktop/Mobile via Tauri) scaffolding. If you want the absolute easiest, most visually pleasing DX in Rust, Rullst is your home.
 
 ### 🎨 Isomorphic Full-Stack Frameworks (Dioxus, Leptos)
 These are cutting-edge frameworks that let you write both frontend and backend in a single Rust file using Server Functions and SSR (similar to Next.js or Nuxt).
 * **The Catch:** They are heavily **Frontend/Component-Driven**. Your server's primary job is to hydrate and serve UI components. If you need a traditional backend architecture (dedicated Workers, Stripe webhooks, robust ORM migrations, pure REST APIs for mobile apps), an isomorphic model can sometimes feel restrictive or overly coupled to the UI.
-* **Where Rullst Excels:** **Architectural Freedom & Synergy.** Rullst is an **API-First / Traditional Full-Stack** (like Rails or Laravel). It gives you an uncompromised, heavy-duty backend layer. But we don't compete with Dioxus/Leptos—we *embrace* them! Rullst allows you to use Dioxus for your UI layer natively via Wasm Islands (`cargo rullst build:client`) or Omni Desktop apps (`cargo rullst make:omni`), combining a hardcore Rullst backend with a beautiful Dioxus frontend.
+* **Where Rullst Excels:** **Architectural Freedom & Synergy.** Rullst is an **API-First / Traditional Full-Stack** (like Rails or Laravel). It gives you an uncompromised, heavy-duty backend layer. But we don't compete with Dioxus/Leptos/Tauri—we *embrace* them! Rullst allows you to use Dioxus for your frontend natively via Wasm Islands (`cargo rullst build:client`), or package your entire application into Desktop & Mobile apps via **Tauri** (`cargo rullst make:omni`).
+
+### 📊 The Full-Stack Feature Matrix
+
+| Feature | **Rullst** | **Loco** | **Topcoat** | **Dioxus / Leptos** | **Axum / Actix** |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **HTTP & Routing** | ✅ | ✅ | ✅ | ✅ (SSR) | ✅ |
+| **Built-in ORM** | ✅ (Rullst-ORM) | ✅ (SeaORM) | ✅ (Toasty) | ❌ | ❌ |
+| **Interactive CLI Dashboard** | ✅ (Rullst Studio) | ❌ | ❌ | ❌ | ❌ |
+| **Auto-Generated Admin Panel**| ✅ (Rullst Nexus) | ❌ | ❌ | ❌ | ❌ |
+| **Wasm Islands (Frontend)** | ✅ (Pure Rust) | ❌ | ❌ | ✅ (Core focus) | ❌ |
+| **Reactive SSR (No-JS)** | ✅ (Pure Rust) | ❌ | ✅ (Signals)| ❌ | ❌ |
+| **Mobile/Desktop Apps** | ✅ (Tauri Integration)| ❌ | ❌ | ✅ (Dioxus) | ❌ |
+| **Hot-Reloading** | ✅ (Built-in) | ❌ | ❌ | ✅ (Dioxus) | ❌ |
+| **Zero-Panics Policy** | ✅ (Enforced) | ❌ | ❌ | ❌ | ❌ |
+| **TypeScript SDK Generator** | ✅ (Built-in) | ❌ | ❌ | ❌ | ❌ |
+| **OpenTelemetry Integration** | ✅ (Built-in) | ❌ | ❌ | ❌ | ❌ |
 
 ---
 
-### 📚 Documentation & Community
+### 💡 The Rullst Philosophy
 
-We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
+Unlike other frameworks, Rullst strives to be **simultaneously simple and complete**, with a relentless focus on **security** and **developer experience (DX)**.
 
-👉 **[Explore the Official Website & Docs](https://rullst.github.io/#docs)**
+The origins of this philosophy can be traced back to the very creation of the Rust programming language. The story goes that Graydon Hoare, the original creator of Rust, lived in an apartment building with an elevator that kept crashing due to software bugs in its underlying C/C++ code. Frustrated by having to climb the stairs because of memory safety vulnerabilities, he set out to create a language that was incredibly fast, yet guaranteed memory safety by design—so that developers could build things that "just worked" without fear.
 
-💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
+Rullst was forged with this exact mindset. We believe that web development shouldn't be a constant struggle against the framework, the language, or runtime bugs. Rullst is built for those who want to build with ease and safety, harnessing the raw speed and resource efficiency of Rust.
 
-> **Found a bug?** [Report an Issue](https://github.com/Rullst/Rullst/issues)
+### Our Core Tenets
+
+1. **Simple yet Complete:** We solve the hardest web development problems out-of-the-box securely (routing, auth, ORM, background jobs, hot-reloading), without sacrificing simplicity or completeness. You shouldn't have to piece together 15 different micro-libraries just to build a secure SaaS.
+
+2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
+
+Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
