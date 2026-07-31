@@ -20,11 +20,22 @@
 
 ---
 
+### 🏛️ The Rullst Monorepo (v12.0.0+)
+
+Rullst is now a unified Monorepo! The framework's core (`rullst`), the database layer (`rullst-orm`), and the frontend connectivity (`rullst-connect`) are now engineered in lockstep under a single repository. This unified architecture ensures 100% compatibility across the stack, centralized security audits, and a seamless developer experience from backend to edge.
+
+**Explore the Ecosystem:**
+- 🦀 **[Rullst Core (Web Framework)](./rullst/README.md)**
+- 💾 **[Rullst-ORM (Database Layer)](./rullst-orm/README.md)**
+- 🔌 **[Rullst-Connect (Frontend Integration)](./rullst-connect/README.md)**
+
+---
+
 ### 📚 Documentation & Community
 
 We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
 
-👉 **[Explore the Official Website & Docs](https://rullst.github.io/#docs)**
+👉 **[Explore the Official Website & Docs](https://rullst.github.io/Rullst/book/index.html)**
 
 💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
 
@@ -47,7 +58,7 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 | **OSSF Scorecard** | [![OSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/Rullst/Rullst?label=&style=flat-square)](https://github.com/Rullst/Rullst/actions/workflows/scorecards.yml) | Supply-chain security & best practices |
 | **Codecov** | [![Codecov](https://img.shields.io/codecov/c/github/Rullst/Rullst?style=flat-square&label=)](https://codecov.io/gh/Rullst/Rullst) | Strict code coverage enforcement |
 | **OpenSSF** | [![OpenSSF](https://img.shields.io/badge/status-passing-brightgreen?style=flat-square&label=)](https://www.bestpractices.dev/projects/13321) | Open source security standards |
-| **Matrix DB Tests** | <a href="https://github.com/Rullst/rullst-orm/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Rullst/rullst-orm/ci.yml?style=flat-square&label=" alt="Testcontainers" /></a> | Dockerized PostgreSQL & MySQL integration tests |
+| **Matrix DB Tests** | [![Matrix DB Tests](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/ci.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/ci.yml) | Dockerized PostgreSQL & MySQL integration tests |
 | **Continuous Fuzzing** | [![Continuous Fuzzing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/fuzzing.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/fuzzing.yml) | Fuzzing against edge cases & panics |
 | **Property Testing** | [![Property Testing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/proptest.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/proptest.yml) | Validating complex logic against edge cases |
 | **CodeQL SAST** | [![CodeQL SAST](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/codeql.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/codeql.yml) | Advanced semantic code analysis |
@@ -66,10 +77,12 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 | **Mutation Testing** | [![Mutation Testing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/mutants.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/mutants.yml) | Mutation testing for test suite robustness |
 | **SLSA Level 3** | [![SLSA 3](https://img.shields.io/badge/SLSA-Level_3-brightgreen?style=flat-square&label=)](https://slsa.dev/) | Supply-chain Levels for Software Artifacts |
 | **Panic Policy** | [![Zero Panics Policy](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/zero-panics.yml?style=flat-square&label=Zero%20Panics)](https://github.com/Rullst/Rullst/actions/workflows/zero-panics.yml) | Graceful error handling across the framework |
+| **Secret Scanning** | [![Trufflehog](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/trufflehog.yml?style=flat-square&label=Trufflehog)](https://github.com/Rullst/Rullst/actions/workflows/trufflehog.yml) | Automated CI prevention of leaked credentials |
 | **MSRV** | [![MSRV](https://img.shields.io/badge/MSRV-1.96.0-orange?style=flat-square&label=)](https://github.com/Rullst/Rullst) | Minimum Supported Rust Version |
 
 </div>
 
+> 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](./WORKFLOWS.md)**
 
 <br>
 <h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
@@ -114,7 +127,7 @@ Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity w
 Rullst brings the ergonomics of Laravel and Ruby on Rails to the blazing-fast, memory-safe world of Rust:
 
 - 🚀 **Hybrid Hot-Reloading**: Sub-millisecond UI updates via WebSockets, paired with Zero-downtime Dynamic Library (`.dll`/`.so`) hot-swapping for backend business logic.
-- 🎨 **Rullst Nexus**: An auto-generated, dark-mode CMS & Admin Panel directly from your Structs.
+- 🎨 **Rullst Studio & Nexus**: An all-in-one Web Suite (`cargo rullst studio`) with Data Browser, Visual ER Diagram, Dynamic Feature Flags, Real-time Logger, and auto-generated Admin Panels from your Structs.
 - 🛡️ **Zero-Panic Policy**: Hardened architecture built for production edge infrastructure.
 - ⚡ **Interactive Scaffolding**: 1-click generators for Auth, ERPs, Uptime Monitors, and Deployments.
 
@@ -176,6 +189,8 @@ These are cutting-edge frameworks that let you write both frontend and backend i
 | **Web-based Database Studio** | ✅ (Rullst Studio) | ❌ | ❌ | ❌ | ❌ |
 | **Auto-Generated Admin Panel**| ✅ (Rullst Nexus) | ❌ | ❌ | ❌ | ❌ |
 | **Auto-Generated Mermaid Diagram** | ✅ (Built-in) | ❌ | ❌ | ❌ | ❌ |
+| **Dynamic Feature Flags** | ✅ (DB-backed) | ❌ | ❌ | ❌ | ❌ |
+| **Real-time Request Logger** | ✅ (SSE Stream) | ❌ | ❌ | ❌ | ❌ |
 | **Wasm Islands (Frontend)** | ✅ (Pure Rust) | ❌ | ❌ | ✅ (Core focus) | ❌ |
 | **Reactive SSR (No-JS)** | ✅ (Pure Rust) | ❌ | ✅ (Signals)| ❌ | ❌ |
 | **Mobile/Desktop Apps** | ✅ (Tauri Integration)| ❌ | ❌ | ✅ (Dioxus) | ❌ |
@@ -183,6 +198,7 @@ These are cutting-edge frameworks that let you write both frontend and backend i
 | **Zero-Panics Policy** | ✅ (Enforced) | ❌ | ❌ | ❌ | ❌ |
 | **TypeScript SDK Generator** | ✅ (Built-in) | ❌ | ❌ | ❌ | ❌ |
 | **OpenAPI / Swagger** | ✅ (Auto-Generated) | ❌ | ❌ | ❌ | ✅ (Via utoipa/poem-openapi) |
+| **AI Agents & RAG Integration** | ✅ (Built-in via `rullst-ai`) | ❌ | ❌ | ❌ | ❌ |
 | **Background Workers** | ✅ (Queue + Redis) | ✅ (Task worker) | ❌ | ❌ | ❌ |
 | **OpenTelemetry Integration** | ✅ (Built-in) | ❌ | ❌ | ❌ | ❌ |
 
@@ -203,3 +219,9 @@ Rullst was forged with this exact mindset. We believe that web development shoul
 2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
 
 Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
+
+<br>
+
+<div align="center">
+  <p><i>"All glory and honor to God יהוה in the name of Yeshua the Messiah (Jesus Christ)."</i></p>
+</div>
