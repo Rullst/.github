@@ -25,9 +25,20 @@
 Rullst is now a unified Monorepo! The framework's core (`rullst`), the database layer (`rullst-orm`), and the frontend connectivity (`rullst-connect`) are now engineered in lockstep under a single repository. This unified architecture ensures 100% compatibility across the stack, centralized security audits, and a seamless developer experience from backend to edge.
 
 **Explore the Ecosystem:**
-- 🦀 **[Rullst Core (Web Framework)](./rullst/README.md)**
-- 💾 **[Rullst-ORM (Database Layer)](./rullst-orm/README.md)**
-- 🔌 **[Rullst-Connect (Frontend Integration)](./rullst-connect/README.md)**
+- 🦀 **[Rullst Core (Web Framework)](https://github.com/Rullst/Rullst)**
+- 💾 **[Rullst-ORM (Database Layer)](https://github.com/Rullst/Rullst/tree/main/rullst-orm)**
+- 🔌 **[Rullst-Connect (Frontend Integration)](https://github.com/Rullst/Rullst/tree/main/rullst-connect)**
+
+---
+
+### 🔓 Zero Lock-In Guarantee (100% Axum & SQLx)
+
+Rullst is built directly on top of **Axum**, **Tokio**, and **Tower**. It does not invent proprietary HTTP abstractions or locked-in router types. Every Rullst controller, extractor, and middleware maps 1:1 to standard Axum and Tower equivalents:
+
+- **Incremental Adoption:** Mount existing `axum::Router` instances directly into `rullst::server::Server`.
+- **Standard SQLx:** Run raw `sqlx::Pool` queries alongside `rullst-orm` without wrappers.
+- **Escape Hatch:** Convert Rullst controllers back to raw Axum with a 1-line import change.
+- 📖 Read the full [Axum & SQLx Migration & Escape Hatch Guide](docs/migration/axum-sqlx.md).
 
 ---
 
@@ -35,7 +46,7 @@ Rullst is now a unified Monorepo! The framework's core (`rullst`), the database 
 
 We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
 
-👉 **[Explore the Official Website & Docs](https://rullst.github.io/Rullst/book/index.html)**
+👉 **[Explore the Official Website & Docs](https://rullst.github.io)**
 
 💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
 
@@ -75,6 +86,7 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 | **Miri UB Detection** | [![Miri](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/miri.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/miri.yml) | Detecting Undefined Behavior and memory leaks |
 | **Kani Verifier** | [![Kani Verifier](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/kani.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/kani.yml) | Automated reasoning and formal verification |
 | **Mutation Testing** | [![Mutation Testing](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/mutants.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/mutants.yml) | Mutation testing for test suite robustness |
+| **Architecture Linter** | [![TangleGuard](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/tangleguard.yml?style=flat-square&label=)](https://github.com/Rullst/Rullst/actions/workflows/tangleguard.yml) | Enforcing architectural boundaries |
 | **SLSA Level 3** | [![SLSA 3](https://img.shields.io/badge/SLSA-Level_3-brightgreen?style=flat-square&label=)](https://slsa.dev/) | Supply-chain Levels for Software Artifacts |
 | **Panic Policy** | [![Zero Panics Policy](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/zero-panics.yml?style=flat-square&label=Zero%20Panics)](https://github.com/Rullst/Rullst/actions/workflows/zero-panics.yml) | Graceful error handling across the framework |
 | **Secret Scanning** | [![Trufflehog](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/trufflehog.yml?style=flat-square&label=Trufflehog)](https://github.com/Rullst/Rullst/actions/workflows/trufflehog.yml) | Automated CI prevention of leaked credentials |
@@ -82,7 +94,7 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 
 </div>
 
-> 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](./WORKFLOWS.md)**
+> 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md)**
 
 <br>
 <h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
