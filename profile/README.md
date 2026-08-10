@@ -20,6 +20,24 @@
 
 ---
 
+### 💡 The Rullst Philosophy
+
+Unlike other frameworks, Rullst strives to be **simultaneously simple and complete**, with a relentless focus on **security** and **developer experience (DX)**.
+
+The origins of this philosophy can be traced back to the very creation of the Rust programming language. The story goes that Graydon Hoare, the original creator of Rust, lived in an apartment building with an elevator that kept crashing due to software bugs in its underlying C/C++ code. Frustrated by having to climb the stairs because of memory safety vulnerabilities, he set out to create a language that was incredibly fast, yet guaranteed memory safety by design—so that developers could build things that "just worked" without fear.
+
+Rullst was forged with this exact mindset. We believe that web development shouldn't be a constant struggle against the framework, the language, or runtime bugs. Rullst is built for those who want to build with ease and safety, harnessing the raw speed and resource efficiency of Rust.
+
+### Our Core Tenets
+
+1. **Simple yet Complete:** We solve the hardest web development problems out-of-the-box securely (routing, auth, ORM, background jobs, hot-reloading), without sacrificing simplicity or completeness. You shouldn't have to piece together 15 different micro-libraries just to build a secure SaaS.
+
+2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
+
+Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
+
+---
+
 ### 📚 Documentation & Community
 
 We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
@@ -29,17 +47,6 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
 
 > **Found a bug?** [Report an Issue](https://github.com/Rullst/Rullst/issues)
-
----
-
-### 🏛️ The Rullst Monorepo (v12.0.0+)
-
-Rullst is now a unified Monorepo! The framework's core (`rullst`), the database layer (`rullst-orm`), and the frontend connectivity (`rullst-connect`) are now engineered in lockstep under a single repository. This unified architecture ensures 100% compatibility across the stack, centralized security audits, and a seamless developer experience from backend to edge.
-
-**Explore the Ecosystem:**
-- 🦀 **[Rullst Core (Web Framework)](https://github.com/Rullst/Rullst)**
-- 💾 **[Rullst-ORM (Database Layer)](https://github.com/Rullst/Rullst/tree/main/rullst-orm)**
-- 🔌 **[Rullst-Connect (Frontend Integration)](https://github.com/Rullst/Rullst/tree/main/rullst-connect)**
 
 ---
 
@@ -99,37 +106,6 @@ Rullst is built directly on top of **Axum**, **Tokio**, and **Tower**. It does n
 
 > 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md)**
 
-<br>
-<h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
-<p align="center">
-  <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="100%"/>
-</p>
-
-<h2 align="center">Click to Watch: How to build a SaaS Blueprint with Rullst </h2>
-<p align="center">
-<a href="https://www.youtube.com/watch?v=nDXLeNM327g">
-  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="430" />
-</a>
-</p>
-
-<table align="center" width="100%">
-  <tr>
-    <th align="center" width="50%"><h2>SaaS Blueprint</h2></th>
-    <th align="center" width="50%"><h2>LMS Blueprint</h2></th>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif1.gif" alt="SaaS Blueprint" width="100%" />
-    </td>
-    <td align="center">
-      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif2.gif" alt="LMS Blueprint" width="100%" />
-    </td>
-  </tr>
-</table>
-
-
----
-
 ### ⚡ Unmatched Performance
 
 Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity without sacrificing bare-metal speed:
@@ -161,6 +137,35 @@ Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity w
 - 🔍 **Static CLI Inspection**: Inspect active route tables, ORM models, and JSON schemas directly in the terminal via `cargo rullst inspect`.
 - 🛡️ **Zero-Panic Policy**: Hardened architecture built with typed `AppError` enums for 100% crash-free edge infrastructure.
 - ⚡ **Interactive Scaffolding**: 1-click generators for Auth, ERPs, SaaS Starters, Uptime Monitors, and Cloud Deployments (`cargo rullst deploy`).
+
+
+<br>
+<h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
+<p align="center">
+  <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="80%"/>
+</p>
+
+<h2 align="center">Click to Watch: How to build a SaaS Blueprint with Rullst </h2>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=nDXLeNM327g">
+  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="430" />
+</a>
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <th align="center" width="50%"><h2>SaaS Blueprint</h2></th>
+    <th align="center" width="50%"><h2>LMS Blueprint</h2></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif1.gif" alt="SaaS Blueprint" width="100%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/Rullst/Rullst/blob/main/gifs/gif2.gif" alt="LMS Blueprint" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ---
 <br>
@@ -250,21 +255,16 @@ These are cutting-edge frameworks that let you write both frontend and backend i
 
 ---
 
-### 💡 The Rullst Philosophy
+### 🏛️ The Rullst Monorepo (v12.0.0+)
 
-Unlike other frameworks, Rullst strives to be **simultaneously simple and complete**, with a relentless focus on **security** and **developer experience (DX)**.
+Rullst is now a unified Monorepo! The framework's core (`rullst`), the database layer (`rullst-orm`), and the frontend connectivity (`rullst-connect`) are now engineered in lockstep under a single repository. This unified architecture ensures 100% compatibility across the stack, centralized security audits, and a seamless developer experience from backend to edge.
 
-The origins of this philosophy can be traced back to the very creation of the Rust programming language. The story goes that Graydon Hoare, the original creator of Rust, lived in an apartment building with an elevator that kept crashing due to software bugs in its underlying C/C++ code. Frustrated by having to climb the stairs because of memory safety vulnerabilities, he set out to create a language that was incredibly fast, yet guaranteed memory safety by design—so that developers could build things that "just worked" without fear.
+**Explore the Ecosystem:**
+- 🦀 **[Rullst Core (Web Framework)](https://github.com/Rullst/Rullst)**
+- 💾 **[Rullst-ORM (Database Layer)](https://github.com/Rullst/Rullst/tree/main/rullst-orm)**
+- 🔌 **[Rullst-Connect (Frontend Integration)](https://github.com/Rullst/Rullst/tree/main/rullst-connect)**
 
-Rullst was forged with this exact mindset. We believe that web development shouldn't be a constant struggle against the framework, the language, or runtime bugs. Rullst is built for those who want to build with ease and safety, harnessing the raw speed and resource efficiency of Rust.
-
-### Our Core Tenets
-
-1. **Simple yet Complete:** We solve the hardest web development problems out-of-the-box securely (routing, auth, ORM, background jobs, hot-reloading), without sacrificing simplicity or completeness. You shouldn't have to piece together 15 different micro-libraries just to build a secure SaaS.
-
-2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
-
-Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
+---
 
 <br>
 
