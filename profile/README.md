@@ -50,17 +50,6 @@ We've rewritten our entire documentation from scratch into a beautiful, high-per
 
 ---
 
-### 🔓 Zero Lock-In Guarantee (100% Axum & SQLx)
-
-Rullst is built directly on top of **Axum**, **Tokio**, and **Tower**. It does not invent proprietary HTTP abstractions or locked-in router types. Every Rullst controller, extractor, and middleware maps 1:1 to standard Axum and Tower equivalents:
-
-- **Incremental Adoption:** Mount existing `axum::Router` instances directly into `rullst::server::Server`.
-- **Standard SQLx:** Run raw `sqlx::Pool` queries alongside `rullst-orm` without wrappers.
-- **Escape Hatch:** Convert Rullst controllers back to raw Axum with a 1-line import change.
-- 📖 Read the full [Axum & SQLx Migration & Escape Hatch Guide](https://github.com/Rullst/Rullst/blob/main/docs/src/axum-sqlx-migration.md).
-
----
-
 <h3 align="center">🛡️ Enterprise-Grade Security</h3>
 
 <p align="center">
@@ -106,6 +95,8 @@ Rullst is built directly on top of **Axum**, **Tokio**, and **Tower**. It does n
 
 > 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md)**
 
+---
+
 ### ⚡ Unmatched Performance
 
 Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity without sacrificing bare-metal speed:
@@ -137,6 +128,17 @@ Rullst's "Zero-Cost Abstraction" architecture provides full-stack productivity w
 - 🔍 **Static CLI Inspection**: Inspect active route tables, ORM models, and JSON schemas directly in the terminal via `cargo rullst inspect`.
 - 🛡️ **Zero-Panic Policy**: Hardened architecture built with typed `AppError` enums for 100% crash-free edge infrastructure.
 - ⚡ **Interactive Scaffolding**: 1-click generators for Auth, ERPs, SaaS Starters, Uptime Monitors, and Cloud Deployments (`cargo rullst deploy`).
+
+---
+
+### 🔓 Zero Lock-In Guarantee (100% Axum & SQLx)
+
+Rullst is built directly on top of **Axum**, **Tokio**, and **Tower**. It does not invent proprietary HTTP abstractions or locked-in router types. Every Rullst controller, extractor, and middleware maps 1:1 to standard Axum and Tower equivalents:
+
+- **Incremental Adoption:** Mount existing `axum::Router` instances directly into `rullst::server::Server`.
+- **Standard SQLx:** Run raw `sqlx::Pool` queries alongside `rullst-orm` without wrappers.
+- **Escape Hatch:** Convert Rullst controllers back to raw Axum with a 1-line import change.
+- 📖 Read the full [Axum & SQLx Migration & Escape Hatch Guide](https://github.com/Rullst/Rullst/blob/main/docs/src/axum-sqlx-migration.md).
 
 
 <br>
