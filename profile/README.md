@@ -62,6 +62,7 @@
 </div>
 
 > 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md)**
+<br>
 
 ## 💡 The Rullst Philosophy
 
@@ -100,8 +101,6 @@ Rullst runs on Rust. If you don't have Rust installed yet, install it using the 
 
 > *Tip: Restart your terminal and verify the installation by running `cargo --version`.*
 
----
-
 #### 2️⃣ Step 2: Create Your Web Project
 In your terminal, choose how you want to create your project:
 
@@ -123,8 +122,6 @@ cargo init
 >     └── main.rs   # (Your server application entry point)
 > ```
 
----
-
 #### 3️⃣ Step 3: Add Rullst to Your Project
 Run these commands in your terminal (inside your project folder) to add Rullst and the Tokio runtime:
 
@@ -133,12 +130,8 @@ cargo add rullst
 cargo add tokio --features full
 ```
 
----
-
 #### 4️⃣ Step 4: Add the Code (`src/main.rs`)
 Open `src/main.rs` in your code editor and replace its entire contents with the Hello World code below:
-
----
 
 ### 💻 The Beauty of Rullst (Hello World)
 
@@ -176,8 +169,6 @@ async fn main() {
 - **🛣️ Expressive Routing (`routes!`)**: Clean declarative macro mapping directly to Tokio/Axum static dispatch without runtime reflection.
 - **🛡️ Production-Ready Kernel (`Server`)**: Inherits automatic OWASP Secure Headers A+, double-submit CSRF protection, and microsecond telemetry out of the box.
 
----
-
 #### 5️⃣ Step 5: Run Your Application! 🚀
 Inside your project folder (where `Cargo.toml` is located), start the server:
 
@@ -193,9 +184,6 @@ Open **`http://localhost:3000`** in your browser to see your high-performance we
 > cargo rullst
 > ```
 
----
-
-<br>
 <h2 align="center"> CLI ⚡ Rullst Framework ⚡ </h2>
 <p align="center">
   <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/images/gifs/gif.gif" alt="Rullst CLI Initiating LMS Blueprint" width="80%"/>
