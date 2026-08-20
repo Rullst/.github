@@ -6,8 +6,8 @@
   <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/Rullst.png" alt="Rullst Logo" width="300">
 </p>
 
-<h1 align="center">Rullst 📜🦀🌐🚀</h1>
-<h3 align="center"><i>Rust for effortless, highly secure development.</i></h3>
+<h1 align="center">🌐🦀📜 Rullst 📜🦀🌐</h1>
+<h3 align="center"><i>Effortless, highly secure Rust framework.</i></h3>
 
 <p align="center">
   <a href="https://crates.io/crates/rullst"><img src="https://img.shields.io/crates/v/rullst?style=for-the-badge&color=10b981&logo=rust" alt="Crates.io"></a>
@@ -17,33 +17,12 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
 </p>
 
-<br/>
-
-### 💡 The Rullst Philosophy
-
-Unlike other frameworks, Rullst strives to be **simultaneously simple and complete**, with a relentless focus on **security** and **developer experience (DX)**.
-
-The origins of this philosophy can be traced back to the very creation of the Rust programming language. The story goes that Graydon Hoare, the original creator of Rust, lived in an apartment building with an elevator that kept crashing due to software bugs in its underlying C/C++ code. Frustrated by having to climb the stairs because of memory safety vulnerabilities, he set out to create a language that was incredibly fast, yet guaranteed memory safety by design—so that developers could build things that "just worked" without fear.
-
-Rullst was forged with this exact mindset. We believe that web development shouldn't be a constant struggle against the framework, the language, or runtime bugs. Rullst is built for those who want to build with ease and safety, harnessing the raw speed and resource efficiency of Rust.
-
-### Our Core Tenets
-
-1. **Simple yet Complete:** We solve the hardest web development problems out-of-the-box securely (routing, auth, ORM, background jobs, hot-reloading), without sacrificing simplicity or completeness. You shouldn't have to piece together 15 different micro-libraries just to build a secure SaaS.
-
-2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
-
-Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
-
----
-
 <h3 align="center">🛡️ Enterprise-Grade Security</h3>
 
 <p align="center">
   Rullst is built with a "Zero-Panic Policy" and tested against the most rigorous standards in the industry.<br/>
   Our continuous pipeline guarantees absolute safety for production edge infrastructure:
 </p>
-
 
 <div align="center">
 
@@ -84,15 +63,21 @@ Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We 
 
 > 📖 **[Read the detailed breakdown of all our CI/CD Security Workflows here](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md)**
 
-### 📚 Documentation & Community
+## 💡 The Rullst Philosophy
 
-We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
+Unlike other frameworks, Rullst strives to be **simultaneously simple and complete**, with a relentless focus on **security** and **developer experience (DX)**.
 
-👉 **[Explore the Official Website & Docs](https://rullst.github.io)**
+The origins of this philosophy can be traced back to the very creation of the Rust programming language. The story goes that Graydon Hoare, the original creator of Rust, lived in an apartment building with an elevator that kept crashing due to software bugs in its underlying C/C++ code. Frustrated by having to climb the stairs because of memory safety vulnerabilities, he set out to create a language that was incredibly fast, yet guaranteed memory safety by design—so that developers could build things that "just worked" without fear.
 
-💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
+Rullst was forged with this exact mindset. We believe that web development shouldn't be a constant struggle against the framework, the language, or runtime bugs. Rullst is built for those who want to build with ease and safety, harnessing the raw speed and resource efficiency of Rust.
 
-> **Found a bug?** [Report an Issue](https://github.com/Rullst/Rullst/issues)
+### Our Core Tenets
+
+1. **Simple yet Complete:** We solve the hardest web development problems out-of-the-box securely (routing, auth, ORM, background jobs, hot-reloading), without sacrificing simplicity or completeness. You shouldn't have to piece together 15 different micro-libraries just to build a secure SaaS.
+
+2. **Built for Humans and AIs:** Rullst is architected to be highly legible and free of runtime "magic". By heavily utilizing static dispatch and compile-time guarantees, the codebase is transparent. This empowers both human developers and AI coding agents to collaborate and build production-ready systems rapidly, even without deep prior framework knowledge.
+
+Rullst is not just a tool; it is a commitment to **Emotional Productivity**. We take care of the boilerplate and the security pitfalls so you can focus entirely on creating value.
 
 ---
 
@@ -219,7 +204,7 @@ Open **`http://localhost:3000`** in your browser to see your high-performance we
 <h2 align="center">Click to Watch: How to build a SaaS Blueprint with Rullst </h2>
 <p align="center">
 <a href="https://www.youtube.com/watch?v=nDXLeNM327g">
-  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="430" />
+  <img src="https://img.youtube.com/vi/nDXLeNM327g/hqdefault.jpg" alt="How to build a SaaS with Rullst" width="60%" />
 </a>
 </p>
 
@@ -249,11 +234,15 @@ Open **`http://localhost:3000`** in your browser to see your high-performance we
   <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/images/Rullst-Omni.png" alt="Rullst Omni Mobile & Desktop Simulator" width="100%"/>
 </p>
 
----
+### 📚 Documentation & Community
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/images/Rullst-security.png" alt="Rullst Security RASP & WAF Shield" width="100%"/>
-</p>
+We've rewritten our entire documentation from scratch into a beautiful, high-performance website. Discover everything Rullst can do, read the benchmarks, and master the framework:
+
+👉 **[Explore the Official Website & Docs](https://rullst.github.io)**
+
+💬 **[Join the Community on Discord](https://discord.gg/2ntKFtsSjw)**
+
+> **Found a bug?** [Report an Issue](https://github.com/Rullst/Rullst/issues)
 
 ---
 
