@@ -33,35 +33,6 @@
   <a href="https://github.com/Rullst/Rullst/blob/main/CONTRIBUTING.md"><strong>Contribute</strong></a>
 </p>
 
-> **This is the unreleased v13 development branch.** Its starting point is the
-> published v12.1.0 source plus its documentation closeout; a branch name is not a
-> v13 release. Installation commands below select stable v12; source CI badges
-> describe development `main`, not published-release readiness. The stable
-> maintenance branch is [`v12`](https://github.com/Rullst/Rullst/tree/v12);
-> `v5` is no longer maintained. [v13 priorities](ROADMAP.md#v13-execution-priorities)
-> · [v12 release record](https://rullst.github.io/Rullst/book/v12.html)
-> · [Compatibility policy](https://rullst.github.io/Rullst/book/compatibility-policy.html).
-
-The development manifests and CLI now identify `13.0.0-alpha.1`. See the
-[v13 adoption guide](docs/src/migration-v13.md) for the current compatibility
-inventory, explicit source evaluation and reviewed application updates.
-
-The current development candidates include [private S3/R2 files](docs/src/private-object-storage.md),
-[session management](docs/src/session-management.md), [Redis messaging](docs/src/redis-messaging.md),
-[recoverable Live UI](docs/src/live-recovery.md),
-[distributed tracing](docs/src/distributed-tracing.md) and
-[transactional partial updates](docs/src/transactional-partial-updates.md). The six increments passed
-[hosted and extracted-package source admission](docs/src/v13-delivery-plan.md#six-increment-source-admission-on-september-21).
-The next seven increments add [shared consent](rullst-privacy/README.md),
-[email login](docs/src/email-login.md), [API tokens](docs/src/api-tokens.md),
-[shared mail suppression](docs/src/shared-mail-suppression.md),
-[recurring publication](docs/src/recurring-publications.md),
-[outgoing webhooks](docs/src/outgoing-webhooks.md) and
-[multipart uploads](docs/src/private-multipart-uploads.md). Their combined source
-and dependency validation passed [PR #239](https://github.com/Rullst/Rullst/pull/239).
-Final release admission remains separate; these additions are not part of the
-published v12.1.0 package.
-
 ## 🎓 Rullst Academy — built with Rullst to teach Rullst
 
 [Rullst Academy](https://academy.rullst.win/) is a free learning platform built
