@@ -46,15 +46,15 @@
 ## ⚡ Rullst in 30 seconds
 
 ```bash
-cargo install cargo-rullst --version '^12' --locked
+cargo install cargo-rullst --version =13.0.0-alpha.3 --locked
 cargo rullst new my_app    # choose Blank/API, Blog, SaaS, LMS, Portfolio or ERP
 cd my_app
 cargo rullst dev           # rebuilds and restarts every time you save
 ```
 
 That's it: a running application, generated as readable Rust you can change —
-no hidden runtime magic. The selector installs the latest stable v12 CLI; use a
-full version such as `--version 12.1.2` to reproduce a specific release.
+no hidden runtime magic. This installs the 13.0.0-alpha.3 prerelease; the v12
+line reached end of life on 16 October 2026 (see below).
 
 [Installation and prerequisites](https://rullst.github.io/Rullst/book/1-getting-started.html)
 · [Zero-to-Hero tutorial](https://rullst.github.io/Rullst/book/tutorials/01-hello-world.html)
@@ -79,15 +79,15 @@ Recorded screenshot; layout and controls can differ by version. [Development wor
 ## 🦀 Code that says what it does
 
 ```rust
-use rullst::{html, response::Html, routes, Server};
+use rullst::{html, routes, Markup, Server};
 
-async fn home() -> Html<String> {
-    Html(html! {
+async fn home() -> Markup {
+    html! {
         <div class="min-h-screen bg-slate-900 text-emerald-400 flex flex-col items-center justify-center font-sans">
             <h1 class="text-5xl font-extrabold mb-4">"Hello, Rullst! 📜🦀"</h1>
             <p class="text-slate-400 text-lg">"Your first typed route is running."</p>
         </div>
-    })
+    }
 }
 
 #[tokio::main]
@@ -154,7 +154,7 @@ curl http://127.0.0.1:3000/api/health
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Rullst/Rullst/main/images/readme/features-dark.webp">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Rullst/Rullst/main/images/readme/features-light.webp">
-    <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/images/readme/features-dark.webp" alt="One framework, the whole product. Secure by default: Argon2id, sessions, passkeys, OAuth2/OIDC, CSRF, strict headers, WAF and login jail. Data that stays correct: Active Record, transactions, migrations and an outbox on SQLite, PostgreSQL and MySQL. Six real blueprints: API, Blog, SaaS, LMS, Portfolio and ERP. Made for AI coding: explicit APIs, compile-time macros, typed errors, no runtime reflection. Payments and email: Stripe billing with signed webhooks; Resend, AWS SES, SendPulse and SMTP. AI built in: OpenAI, Claude, Gemini, DeepSeek and Ollama with prompt-injection filtering and PII masking. See inside your app: Studio telemetry and the Nexus admin with a security radar. Web first, native too: HTMX, JSON APIs, and Tauri desktop and mobile shells via Omni." width="100%">
+    <img src="https://raw.githubusercontent.com/Rullst/Rullst/main/images/readme/features-dark.webp" alt="One framework, the whole product. Secure by default: Argon2id, sessions, passkeys, OAuth2/OIDC, CSRF, strict headers, WAF and login jail. Data that stays correct: Active Record, transactions, migrations and an outbox on SQLite, PostgreSQL and MySQL. Six real blueprints: API, Blog, SaaS, LMS, Portfolio and ERP. Made for AI coding: explicit APIs, compile-time macros, typed errors, no runtime reflection. Payments and email: Stripe billing with signed webhooks; Resend, AWS SES, SendPulse and SMTP. AI built in: OpenAI, Claude, Gemini, DeepSeek and Ollama with prompt-injection filtering and PII masking. See inside your app: Studio telemetry and the Nexus admin with a security radar. Web first, installable: HTMX, JSON APIs, and installable PWAs for Google Play and the Microsoft Store." width="100%">
   </picture>
 </p>
 
@@ -219,7 +219,7 @@ serves browser graphics from Rullst.
 </p>
 
 Rullst is a family of focused crates in one versioned workspace — select only
-what your application needs. The stable v12 release publishes sixteen crates;
+what your application needs. The v12 line, now end of life, published sixteen crates;
 detailed feature and provider boundaries live in the
 [specification](https://rullst.github.io/Rullst/book/spec.html). In v13, every
 crate is labelled Core, Extension or Experimental; see the
@@ -247,13 +247,14 @@ crate is labelled Core, Extension or Experimental; see the
 | [rullst-orm-macros](https://github.com/Rullst/Rullst/tree/main/rullst-orm-macros) | Typed ORM code generation | Core |
 | [cargo-rullst](https://github.com/Rullst/Rullst/tree/main/cargo-rullst) | Project scaffolding, development and upgrade CLI | Core |
 
-The v13 workspace on `main` also contains unpublished candidates, all in the
+The v13 workspace on `main` also contains four new packages, all in the
 Experimental tier:
 [rullst-privacy](https://github.com/Rullst/Rullst/tree/main/rullst-privacy),
 [rullst-supervision](https://github.com/Rullst/Rullst/tree/main/rullst-supervision),
 [rullst-media](https://github.com/Rullst/Rullst/tree/main/rullst-media) and
 [rullst-labs](https://github.com/Rullst/Rullst/tree/main/rullst-labs) are in
-the v13 release order.
+the v13 release order and were first published in the 13.0.0-alpha.1
+prerelease.
 
 **Tiers (v13):** *Core* packages are needed by every application. *Extensions*
 are optional and supported. *Experimental* packages are optional, may change
@@ -298,7 +299,7 @@ of every application built with Rullst. Explore the
 and [quality scorecard](https://rullst.github.io/Rullst/book/quality-scorecard.html).
 
 <details>
-<summary><strong>🛡️ Open the verification dashboard (39 workflows)</strong></summary>
+<summary><strong>🛡️ Open the verification dashboard (37 workflows)</strong></summary>
 
 <p align="center">
   Badges are pinned to the <code>main</code> branch; they report the latest matching run, not a certification or deployment guarantee.
@@ -329,10 +330,8 @@ and [quality scorecard](https://rullst.github.io/Rullst/book/quality-scorecard.h
 | **Bare-metal `no_std` matrix** | [![no_std](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/no_std-build.yml?branch=main&style=flat-square&label=no_std)](https://github.com/Rullst/Rullst/actions/workflows/no_std-build.yml?query=branch%3Amain) | Builds IoT helpers for Cortex-M and RISC-V targets; this is compile evidence, not hardware testing. |
 | **IoT integration** | [![IoT](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/iot-integration.yml?branch=main&style=flat-square&label=IoT)](https://github.com/Rullst/Rullst/actions/workflows/iot-integration.yml?query=branch%3Amain) | Host tests, signed OTA invariants, and a Cortex-M build. |
 | **IoT crypto containment** | [![IoT Crypto](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/pqc-compliance.yml?branch=main&style=flat-square&label=Crypto%20Boundary)](https://github.com/Rullst/Rullst/actions/workflows/pqc-compliance.yml?query=branch%3Amain) | Path-aware signed OTA, Vault, advisory, and simulator-boundary checks; no PQC/HSM certification claim. |
-| **Omni desktop matrix** | [![Omni Desktop](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/omni-desktop.yml?branch=main&style=flat-square&label=Omni%20Desktop)](https://github.com/Rullst/Rullst/actions/workflows/omni-desktop.yml?query=branch%3Amain) | Generates fresh web shells and checks their Tauri crates on Linux, macOS and Windows; no installer, signing or store claim. |
-| **Omni Android compile** | [![Omni Android](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/omni-android.yml?branch=main&style=flat-square&label=Omni%20Android)](https://github.com/Rullst/Rullst/actions/workflows/omni-android.yml?query=branch%3Amain) | Generates a fresh shell and compiles an unsigned Android debug APK; no physical-device, Play testing/signing or store claim. |
-| **Omni iOS simulator** | [![Omni iOS](https://img.shields.io/github/actions/workflow/status/Rullst/Rullst/omni-ios.yml?branch=main&style=flat-square&label=Omni%20iOS)](https://github.com/Rullst/Rullst/actions/workflows/omni-ios.yml?query=branch%3Amain) | Path-aware fresh scaffold generation and compilation on a macOS iOS simulator target; no device, signing or App Store claim. |
 | **PR security evidence** | [![PR-only evidence](https://img.shields.io/badge/trigger-PR--only-2563eb?style=flat-square)](https://github.com/Rullst/Rullst/actions/workflows/ai-sentinel-pr.yml?query=event%3Apull_request) | Pull-request-only bounded IDOR/RBAC heuristics and CycloneDX SBOM artifact. It intentionally has no continuous `main` status. |
+| **PR mutation diff** | [![PR-only evidence](https://img.shields.io/badge/trigger-PR--only-2563eb?style=flat-square)](https://github.com/Rullst/Rullst/actions/workflows/mutants-pr.yml?query=event%3Apull_request) | Pull-request-only cargo-mutants run over the changed Rust lines; a missed mutant fails it. It intentionally has no continuous `main` status. |
 
 Deep or irreversible workflows are intentionally not presented as continuously
 green main gates:
@@ -347,15 +346,17 @@ green main gates:
 | [Kani](https://github.com/Rullst/Rullst/actions/workflows/kani.yml), [Miri](https://github.com/Rullst/Rullst/actions/workflows/miri.yml), [mutation testing](https://github.com/Rullst/Rullst/actions/workflows/mutants.yml), [cargo-udeps](https://github.com/Rullst/Rullst/actions/workflows/udeps.yml) | Manual or scheduled research signals: selected Kani/Miri scopes are strict, while mutation and unused-dependency findings remain explicitly informational. |
 | [v13 Verus pilot](https://github.com/Rullst/Rullst/blob/main/.github/workflows/verus.yml) | Optional production-linked age-policy proof with pinned tooling and three negative controls. Hosted registration/acceptance remains pending; no framework-wide correctness claim. |
 | [GitHub Pages](https://github.com/Rullst/Rullst/actions/workflows/pages.yml) | Deploys development documentation from `main`; it is not a code-quality gate. |
-| [Release and provenance](https://github.com/Rullst/Rullst/actions/workflows/release.yml) | Exact version tags only: full verification, package-all, evidence bundle, checksums, GitHub build-provenance attestation, changelog-derived release notes, and ordered crates.io publication. This does **not** claim a project-wide SLSA level or independent certification. |
+| [Release and provenance](https://github.com/Rullst/Rullst/actions/workflows/release.yml) | Exact version tags only: exact-SHA admission of the full CI matrix, package-all, evidence bundle, checksums, GitHub build-provenance attestation, changelog-derived release notes, and ordered crates.io publication. This does **not** claim a project-wide SLSA level or independent certification. |
 
 Scheduled events use the repository's default branch, so scheduled and
-continuous development evidence refer to `main`; stable v12 has its own branch.
+continuous development evidence refer to `main`; the frozen v12 line has its own branch.
 The branch-protection profiles and the exact scope of all
-39 workflow definitions in this source branch are documented in
+37 workflow definitions in this source branch are documented in
 [WORKFLOWS.md](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md).
 
 > 📖 **[Read the detailed breakdown of all CI/CD and security workflows](https://github.com/Rullst/Rullst/blob/main/WORKFLOWS.md).**
+>
+> 🧰 **[How the repository is maintained](https://github.com/Rullst/Rullst/blob/main/MAINTAINING.md)**: workstation rules, CI gates, fuzzing evidence and release admission.
 >
 > 🧭 **[Capability Status & Vision Decisions](https://github.com/Rullst/Rullst/blob/main/docs/src/capability-ledger.md)** preserves ambitious features that are partial or not implemented, with an explicit recommendation and rationale for each one.
 >
@@ -379,9 +380,77 @@ migrate production data. [Assisted upgrade tutorial](https://rullst.github.io/Ru
 
 ## 🚀 What's next: v13
 
-This `main` branch is where **v13** is being built (`13.0.0-alpha.1`). The
-commands above install the stable **v12** line, maintained on the
-[`v12`](https://github.com/Rullst/Rullst/tree/v12) branch; v5 is no longer maintained.
+This `main` branch is where **v13** is being built; its latest prerelease,
+`13.0.0-alpha.3`, is on crates.io. **The v12 line reached end of life on
+16 October 2026**: 12.3.0 is its last release and the
+[`v12`](https://github.com/Rullst/Rullst/tree/v12) branch is frozen (v5 is no
+longer maintained either). crates.io has since yanked the `zip` releases that
+12.x's Studio needs, so a new 12.x project no longer resolves its
+dependencies; existing projects with a `Cargo.lock` keep building. Cargo never
+selects a prerelease on its own, so `cargo install cargo-rullst` and
+`cargo add rullst` without a version still pick 12.x. Name the exact
+prerelease:
+
+```bash
+cargo install cargo-rullst --version =13.0.0-alpha.3 --locked
+```
+
+In a hand-written `Cargo.toml`, pin it with `=` too: a plain
+`"13.0.0-alpha.3"` is a caret requirement that also accepts later alphas,
+which may break the API. Select the database profile you use (plus
+capabilities such as `auth` or `nexus`). Up to 13.0.0-alpha.2 the default
+features compiled the SQLite, PostgreSQL and MySQL drivers, so turn them off;
+from alpha.3 the defaults are empty and a database-free application compiles
+no database code:
+
+```toml
+rullst = { version = "=13.0.0-alpha.3", default-features = false, features = ["strict-postgres"] }
+```
+
+`cargo rullst new` already turns the default features off and, from
+13.0.0-alpha.2, pins the version with `=`. A project generated by the
+13.0.0-alpha.1 CLI has the caret form; add `=` to its `rullst` and
+`rullst-orm` lines.
+
+### What is new in v13
+
+Since 12.x, with 13.0.0-alpha.3 adding the first six items. Details are in the
+[changelog](https://github.com/Rullst/Rullst/blob/main/CHANGELOG.md) and the
+[v13 adoption guide](https://github.com/Rullst/Rullst/blob/main/docs/src/migration-v13.md).
+
+- **Progressive web apps:** `cargo rullst make:pwa` (manifest, service worker,
+  offline page), a Google Play Trusted Web Activity configuration and a
+  Microsoft Store guide ([guide](https://rullst.github.io/Rullst/book/tutorials/43-progressive-web-apps.html)).
+- **Studio production monitoring:** a read-only monitoring endpoint, and a
+  standalone Studio for remote projects with a project switcher, history and
+  alerts ([guide](https://rullst.github.io/Rullst/book/production-monitoring.html)).
+- **OAuth login:** a login challenge store and `cargo rullst make:oauth` for
+  Google, GitHub, Microsoft and Apple.
+- **i18n:** CLDR plural rules and number, currency and date formatting.
+- **Typed transactions:** `Orm::transaction` returns the error of its closure.
+- **Minimal default features:** `rullst` and `rullst-orm` compile no database
+  code until you select a profile.
+- **Views and data:** `html!` returns `Markup` and has `@if`, `@for` and
+  `@match`; dirty-tracking `save()`; `Schema` constraints and date/time
+  columns; revocable sessions; multipart uploads.
+- **Upgrades:** `cargo rullst upgrade` is assisted and applies per-release
+  rules.
+
+### What v13 removed from 12.x
+
+- The Omni Tauri shells (`make:omni`, `omni`) and `offline-sync`: use a PWA.
+- `rullst-capital` providers other than Stripe and the experimental
+  InfinitePay, payouts and NFS-e: use those or an application-owned adapter on
+  the provider traits.
+- `rullst-mail` providers other than Resend, AWS SES, SendPulse and SMTP: write
+  a `MailDriver` in your application.
+- The planned `rullst-gateway` was abandoned and never published: configure an
+  established reverse proxy (`deploy --platform vps` writes a Caddyfile).
+- The unpublished `rullst-labs-runner` candidate: bring your own runner (see the
+  Labs runner contract).
+
+Each row has its replacement in the
+[v13 adoption guide](https://github.com/Rullst/Rullst/blob/main/docs/src/migration-v13.md).
 
 In development for v13: email login and scoped API tokens, active-session
 management with remote logout, private S3/R2 storage with resumable uploads,
